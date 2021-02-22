@@ -3,10 +3,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/',(req,res)=> res.send('fibonacci'));
+
 //get fibonacci
 app.get("/fibonaccin", (req,res) => {
-     function fibonacci(){
+     let num = parsefloat(req.query.num);
         var x = 0;
         var valor = document.getElementById('num').value;
         var fi = [];
@@ -23,7 +23,7 @@ app.get("/fibonaccin", (req,res) => {
             }
         }
         document.getElementById("resultado").innerHTML ="<h3>"+fi+"</h3>";
-    }
+    
     
  //funcion para devolver con un json
    res.json(fibonacci);
