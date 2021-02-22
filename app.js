@@ -25,9 +25,8 @@ function fibonacci(){
 	}
 	document.getElementById("resultado").innerHTML ="<h3>"+fi+"</h3>";
 }
- app.get("/fibonacci", (req,res) => {
-      
-      if(numero % 2 ===0){
+	num = parseint(req.query.num);      
+      	if(num % 2 ===0){
                           fibonacci(20);
             }else
                     {
@@ -36,7 +35,7 @@ function fibonacci(){
      
  //funcion para devolver con un json
    res.json(fibonacci);
- })
+ });
 //puerto
 app.listen(port,()=>
     console.log(`Puerto ${port}!`));
