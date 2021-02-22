@@ -7,9 +7,9 @@ const port = 3000;
 //get fibonacci
 app.get("/fibonaccin", (req,res) => {
      let num = parsefloat(req.query.num);
+     let fibo =  [0,1]
         var x = 0;
         var valor = document.getElementById('num').value;
-        var fi = [];
         valor = parseInt(valor);
         for (x; x<valor; x++){
             if(x==0){
@@ -23,6 +23,7 @@ app.get("/fibonaccin", (req,res) => {
             }
         }
         document.getElementById("resultado").innerHTML ="<h3>"+fi+"</h3>";
+    
     
     
  //funcion para devolver con un json
