@@ -5,11 +5,10 @@ const port = 3000;
 
 
 //get fibonacci
-app.get("/fibonaccin", (req,res) => {
+app.get("/fibonacci", (req,res) => {
      let num = parsefloat(req.query.num);
      let fibo =  [0,1]
-        var x = 0;
-        var valor = document.getElementById('num').value;
+     var valor = document.getElementById('num').value;
         valor = parseInt(valor);
         for (x; x<valor; x++){
             if(x==0){
@@ -24,8 +23,15 @@ app.get("/fibonaccin", (req,res) => {
         }
         document.getElementById("resultado").innerHTML ="<h3>"+fi+"</h3>";
     
-    
-    
+ app.get("/fibonacci", (req,res) => {
+      
+      if(numero % 2 ===0){
+                          fibonacci(20);
+            }else
+                    {
+                          fibonacci(10);
+                    }
+     
  //funcion para devolver con un json
    res.json(fibonacci);
  })
